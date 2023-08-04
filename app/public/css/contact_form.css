@@ -1,0 +1,59 @@
+/* public/css/contact_form.css */
+
+/* フォームの全体を中央に配置する */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* フォーム内の要素の間隔とサイズを調整 */
+div {
+    margin: 10px 0;
+}
+
+label{
+    font-size:10px;
+}
+
+/* 名前、メールアドレス、電話番号、お問い合わせ内容の入力フィールドを幅広く表示 */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 300px;
+}
+
+/* 画像アップの文字サイズ */
+#image{
+    font-size: 10px;
+}
+
+/* 画像選択ボタンをカスタムデザイン */
+input[type="file"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #555;
+    font-size: 14px;
+}
+
+/* 送信ボタンをカスタムデザイン */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width:200px;
+}
+
+/* 送信ボタンにマウスを乗せたときのホバーエフェクト */
+button:hover {
+    background-color: #0056b3;
+}

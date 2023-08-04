@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\ContactController;
+
+Route::get('/', [ContactController::class, 'index'])->name('contact.form');
+Route::post('/confirm', [ContactController::class, 'confirm'])->name('contact_confirm');
+Route::post('/complete', [ContactController::class, 'complete'])->name('contact_complete');
