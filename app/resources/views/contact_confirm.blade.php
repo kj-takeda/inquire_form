@@ -47,11 +47,19 @@
         </div>
     @endif
 
-    @if (isset($image))
+    @if (isset($image_path))
         <div class="confirmation-box">
             <label for="image">画像：</label>
-            {{ $image }}
-            <img src="../storage/app/{{ $image_path }}" alt="" width="40%">
+            {{ $image_path }}
+            <img src="storage/{{ $new_name }}">
+            <input type="hidden" name="image_path" value="{{ $image_path }}">
+            <input type="hidden" name="extension" value="{{ $extension }}">
+        </div>
+    @else
+        <div class="confirmation-box">
+            <label for="image">画像：</label>
+            {{ $image_path }}
+            <img src="storage/{{ $new_name }}">
             <input type="hidden" name="image_path" value="{{ $image_path }}">
             <input type="hidden" name="extension" value="{{ $extension }}">
         </div>

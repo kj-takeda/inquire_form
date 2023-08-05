@@ -47,11 +47,10 @@ button {
 }
 
 img{
-    border:solid;
-    height:300px;
+    height:260px;
     width:300px;
+    margin-top:15px;
 }
-
 
 /* ボタンにマウスを乗せたときのホバーエフェクト */
 button:hover {

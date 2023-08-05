@@ -26,7 +26,7 @@ textarea {
 }
 
 /* 画像アップの文字サイズ */
-#image{
+#image , #clear{
     font-size: 10px;
 }
 

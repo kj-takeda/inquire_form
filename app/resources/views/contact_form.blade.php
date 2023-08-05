@@ -30,10 +30,11 @@
         <input type="radio" name="gender" id="gender-female" value="女性" required>
     </div>
 
-    <!-- <div>
+    <div>
         <label for="image">画像：</label>
         <input type="file" name="image" id="image" accept="image/*">
-    </div> -->
+        <input type="button" id="clear" value="クリア">
+    </div>
 
     <div>
         <label for="message">お問い合わせ内容：</label>
