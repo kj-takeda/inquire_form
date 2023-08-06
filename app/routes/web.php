@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
 
-Route::get('/', [ContactController::class, 'index'])->name('contact.form');
+Route::get('/', [ContactController::class, 'index'])->name('contact_form');
 Route::post('/confirm', [ContactController::class, 'confirm'])->name('contact_confirm');
-Route::post('/complete', [ContactController::class, 'complete'])->name('contact_complete');
+Route::post('/store', [ContactController::class, 'store'])->name('contact_store');
+Route::get('/complete', [ContactController::class, 'complete'])->name('contact_complete');

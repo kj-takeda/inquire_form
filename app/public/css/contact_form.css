@@ -1,5 +1,16 @@
 /* public/css/contact_form.css */
 
+
+.error-message{
+    list-style: none;
+}
+/* エラーメッセージ */
+.error-message-text{
+    font-size:8px;
+    color:red;
+    margin:0px;
+}
+
 /* フォームの全体を中央に配置する */
 form {
     display: flex;

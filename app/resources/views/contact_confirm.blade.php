@@ -4,46 +4,46 @@
     <link rel="stylesheet" href="/css/contact_confirmation.css">
 </head>
 
-<form method="POST" action="{{ route('contact_complete') }}">
+<form method="POST" action="{{ route('contact_store') }}">
     @csrf
 
-    @if (isset($name))
+    @if (isset($request->name))
         <div class="confirmation-box">
             <label for="name">名前：</label>
-            <p>{{ $name }}</p>
-            <input name="name" value="{{ $name }}" type="hidden">
+            <p>{{$request->name }}</p>
+            <input name="name" value="{{ $request->name }}" type="hidden">
         </div>
     @endif
 
-    @if (isset($email))
+    @if (isset($request->email))
         <div class="confirmation-box">
             <label for="email">メールアドレス：</label>
-            <p>{{ $email }}</p>
-            <input name="email" value="{{ $email }}" type="hidden">
+            <p>{{ $request->email }}</p>
+            <input name="email" value="{{ $request->email }}" type="hidden">
          </div>
     @endif
 
-    @if (isset($phone))
+    @if (isset($request->phone))
         <div class="confirmation-box">
             <label for="phone">電話番号：</label>
-            <p>{{ $phone }}</p>
-            <input name="phone" value="{{ $phone }}" type="hidden">
+            <p>{{ $request->phone }}</p>
+            <input name="phone" value="{{ $request->phone }}" type="hidden">
         </div>
     @endif
 
-    @if (isset($gender))
+    @if (isset($request->gender))
         <div class="confirmation-box">
             <label for="gender">性別：</label>
-            <p>{{ $gender }}</p>
-            <input name="gender" value="{{ $gender }}" type="hidden">
+            <p>{{ $request->gender }}</p>
+            <input name="gender" value="{{ $request->gender }}" type="hidden">
         </div>
     @endif
 
-    @if (isset($message))
+    @if (isset($request->message))
         <div class="confirmation-box">
             <label for="message">お問い合わせ内容：</label>
-            <p>{{ $message }}</p>
-            <input name="message" value="{{ $message }}" type="hidden">
+            <p>{{ $request->message }}</p>
+            <input name="message" value="{{ $request->message }}" type="hidden">
         </div>
     @endif
 
@@ -65,9 +65,6 @@
         </div>
     @endif
 
-    <button class="back-btn" type="submit" name="action" value="back">
-        入力内容修正
-    </button>
     <button class="next-btn" type="submit" name="action" value="submit">
         送信する
     </button>
