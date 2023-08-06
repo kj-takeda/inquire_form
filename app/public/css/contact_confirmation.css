@@ -56,3 +56,8 @@ img{
 button:hover {
     background-color: #0056b3;
 }
+
+/* 文字折り返し */
+p {
+    word-break: break-all;
+  }

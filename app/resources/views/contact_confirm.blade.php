@@ -10,7 +10,7 @@
     @if (isset($name))
         <div class="confirmation-box">
             <label for="name">名前：</label>
-            {{ $name }}
+            <p>{{ $name }}</p>
             <input name="name" value="{{ $name }}" type="hidden">
         </div>
     @endif
@@ -18,7 +18,7 @@
     @if (isset($email))
         <div class="confirmation-box">
             <label for="email">メールアドレス：</label>
-            {{ $email }}
+            <p>{{ $email }}</p>
             <input name="email" value="{{ $email }}" type="hidden">
          </div>
     @endif
@@ -26,7 +26,7 @@
     @if (isset($phone))
         <div class="confirmation-box">
             <label for="phone">電話番号：</label>
-            {{ $phone }}
+            <p>{{ $phone }}</p>
             <input name="phone" value="{{ $phone }}" type="hidden">
         </div>
     @endif
@@ -34,7 +34,7 @@
     @if (isset($gender))
         <div class="confirmation-box">
             <label for="gender">性別：</label>
-            {{ $gender }}
+            <p>{{ $gender }}</p>
             <input name="gender" value="{{ $gender }}" type="hidden">
         </div>
     @endif
@@ -42,7 +42,7 @@
     @if (isset($message))
         <div class="confirmation-box">
             <label for="message">お問い合わせ内容：</label>
-            {{ $message }}
+            <p>{{ $message }}</p>
             <input name="message" value="{{ $message }}" type="hidden">
         </div>
     @endif
