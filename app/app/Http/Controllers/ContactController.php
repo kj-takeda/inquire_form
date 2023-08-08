@@ -39,7 +39,7 @@ class ContactController extends Controller
         compact('request','image_path','extension','new_name'));
     }
 
-    public function store(Request $request)
+    public function store(ContactStoreRequest $request)
     {
         return redirect('/complete');
     }

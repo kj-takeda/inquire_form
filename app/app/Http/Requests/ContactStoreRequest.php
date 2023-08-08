@@ -6,6 +6,8 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ContactStoreRequest extends FormRequest
 {
+    // バリデーションエラーがあれば入力ページに遷移
+    protected $redirect = '/';
     /**
      * Determine if the user is authorized to make this request.
      */
