@@ -38,9 +38,9 @@
     <div>
         <label>性別：</label>
         <label for="gender-male">男性</label>
-        <input type="radio" name="gender" id="gender-male" required>
+        <input type="radio" name="gender" id="gender-male" value=1 required>
         <label for="gender-female">女性</label>
-        <input type="radio" name="gender" id="gender-female" required>
+        <input type="radio" name="gender" id="gender-female" value=2 required>
     </div>
 
     <div>

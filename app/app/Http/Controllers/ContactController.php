@@ -2,6 +2,8 @@
 // app/Http/Controllers/ContactController.php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 //フォームリクエストバリデーション
 use App\Http\Requests\ContactStoreRequest;
 // 画像の保存に使用するStorageクラス

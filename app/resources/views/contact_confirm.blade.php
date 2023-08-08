@@ -34,7 +34,11 @@
     @if (isset($request->gender))
         <div class="confirmation-box">
             <label for="gender">性別：</label>
-            <p>{{ $request->gender }}</p>
+            @if($request->gender == 1)
+                <p>男性</p>
+            @else
+                <p>女性</p>
+            @endif
             <input name="gender" value="{{ $request->gender }}" type="hidden">
         </div>
     @endif
