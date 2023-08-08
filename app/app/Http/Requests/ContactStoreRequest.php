@@ -29,7 +29,7 @@ class ContactStoreRequest extends FormRequest
             'phone'   => 'required|numeric|max:11',
             'gender'  => 'required|string',
             'message' => 'required|string|max:1000',
-            'image'   => 'image|mimes:jpeg',
+            'image'   => 'image|mimes:jpg,jpeg,png',
         ];
     }
 

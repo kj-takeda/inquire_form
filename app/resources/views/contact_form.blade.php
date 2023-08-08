@@ -5,13 +5,6 @@
     <link rel="stylesheet" href="/css/contact_form.css">
 </head>
 
-<!-- バリデーションエラー -->
-<!-- <ul>
-@foreach($errors->all() as $error)
-    <li class="error-message"><p class="error-message-text">{{$error}}</p></li>
-@endforeach
-</ul> -->
-
 <form action="{{ route('contact_confirm') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div>
@@ -73,9 +66,7 @@
     <div>
         <label for="message">お問い合わせ内容：</label>
         <textarea name="message" id="message" 
-        placeholder="1000文字以内" maxlength="1000" required>
-            {{ old('message') }}
-        </textarea>
+        placeholder="1000文字以内" maxlength="1000" required>{{ old('message') }}</textarea>
     </div>
 
     @if($errors->has('message'))
