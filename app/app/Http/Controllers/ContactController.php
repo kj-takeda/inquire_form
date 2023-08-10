@@ -6,8 +6,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //フォームリクエストバリデーション
 use App\Http\Requests\ContactStoreRequest;
+//Informationクラスを使う
+use App\Models\Information;
 // 画像の保存に使用するStorageクラス
 use Illuminate\Support\Facades\Storage;
+
 
 class ContactController extends Controller
 {
@@ -29,7 +32,6 @@ class ContactController extends Controller
             $image_path = Storage::putFileAs(
                 'public', $request->file('image'), $new_name
             );
-
         } else {
             $new_name = 'noimage.jpg';
             $extension = '0';
@@ -41,7 +43,16 @@ class ContactController extends Controller
 
     public function store(ContactStoreRequest $request)
     {
-        return redirect('/complete');
+        $information = new Information;
+        $information->name = $request->name;
+        $information->email = $request->email;
+        $information->phone = $request->phone;
+        $information->image_url = $request->image_path;
+        $information->message = $request->message;
+        $information->gender_id = $request->gender;
+        $information->save();
+
+        return redirect()->route('contact_complete');
     }
     
     public function complete()
