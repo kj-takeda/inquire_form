@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class ContactStoreRequest extends FormRequest
 {
     // バリデーションエラーがあれば入力ページに遷移
-    protected $redirect = '/';
+    protected $redirectRoute = 'contact_form';
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -27,9 +27,9 @@ class ContactStoreRequest extends FormRequest
             'name'    => 'required|string|max:50',
             'email'   => 'required|email|max:50',
             'phone'   => 'required|numeric|max:11',
-            'gender'  => 'required|string',
+            'gender'  => 'required|integer|exists:genders,id',
             'message' => 'required|string|max:1000',
-            'image'   => 'image|mimes:jpg,jpeg,png',
+            'image'   => 'image|max:1024|mimes:jpg,jpeg,png',
         ];
     }
 
@@ -45,6 +45,8 @@ class ContactStoreRequest extends FormRequest
             'phone.max'   => ':attributeは11文字以内で入力してください。',
             'message.max' => ':attributeは1000文字以内で入力してください。',
             'mimes'       => ':attributeは「jpeg」「png」「jpg」限定となります。',
+            'exists'      => ':attributeは有効な値ではありません。',
+
         ];
     }
 

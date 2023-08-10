@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('image')->nullable();;
-            $table->string('message');
-            $table->unsignedBigInteger('gender_id');
+            $table->text('message');
             //gendersテーブルのidを外部キー設定
-            $table->foreign('gender_id')->references('id')->on('genders');
+            $table->foreignId('gender_id')->constrained();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
