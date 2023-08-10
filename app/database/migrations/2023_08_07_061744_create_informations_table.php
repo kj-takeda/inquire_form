@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('image')->nullable();;
+            $table->string('image_url')->nullable();;
             $table->text('message');
             //gendersテーブルのidを外部キー設定
             $table->foreignId('gender_id')->constrained();
