@@ -1,0 +1,64 @@
+/* public/css/contact_confirmation.css */
+
+/* フォームの全体を中央に配置する */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* フォーム内の要素の間隔とサイズを調整 */
+label {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* 入力内容を表示する領域のスタイル */
+.confirmation-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 送信ボタンのスタイル */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-btn {
+    background-color: grey;
+    margin-bottom: 10px;
+    width:300px;
+}
+
+.next-btn {
+    background-color: #007BFF;
+    width:300px;
+}
+
+img{
+    height:260px;
+    width:300px;
+    margin-top:15px;
+}
+
+/* ボタンにマウスを乗せたときのホバーエフェクト */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 文字折り返し */
+p {
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
